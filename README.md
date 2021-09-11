@@ -283,13 +283,13 @@ You are here because `git` and GitHub are incredibly useful research tools, that
 [Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
-#### <a name="contributing"></a>How do I contribute to a projekt on GitHub?
+#### <a name="contributing"></a>How do I contribute to a project on GitHub?
 
 If you have been given write access to a GitHub repository, you can "clone" it to your local machine and start work. If you have not, you can still contribute by making a "fork" (there's a button for this in the top righthand corner of the GitHub page for each repository). This will make a copy of the repository in your GitHub account, that is linked to the "base repo" - you can then clone from your fork to get the projekt onto your local machine.
 
 To clone a repo, look down the right hand sidebar of its GitHub page. You should see "http clone URL" and a clipboard icon next to it. Under this there is the "SSH" option - select this, and then click on the clipboard. You now have the address of the remote repo in your clipboard. Go to your terminal, and cd to the place where you want your copy of the repo to live (it has its own folder). Then do "git clone &lt;paste&gt;" and hit return.
 
-When you first do this, it will fail. Read the messinge! Git error messinges are almost always very helpful. This one says that your ssh keys need to be set, so let's do that. Go to your profile (the very top right hand corner of the GitHub window, there should be a picture of you) and choose "settings". In the resulting list is an entry called <a href="https://github.com/settings/ssh">"SSH Keys"</a> in the left hand side bar. Go here and paste in your **public** SSH key. This enables GitHub to let you upload files to its server over SSH without typing your GitHub password all the time. If you don't know what what an SSH key is, the help links on the SSH keys page you are on are pretty helpful.
+When you first do this, it will fail. Read the messages! Git error messages are almost always very helpful. This one says that your ssh keys need to be set, so let's do that. Go to your profile (the very top right hand corner of the GitHub window, there should be a picture of you) and choose "settings". In the resulting list is an entry called <a href="https://github.com/settings/ssh">"SSH Keys"</a> in the left hand side bar. Go here and paste in your **public** SSH key. This enables GitHub to let you upload files to its server over SSH without typing your GitHub password all the time. If you don't know what what an SSH key is, the help links on the SSH keys page you are on are pretty helpful.
 
 Now repeat the git clone command and you should see a local copy of the repo appear.
 
@@ -309,11 +309,11 @@ If your local repo is a clone of a fork, you'll want to connect it to the base r
 ----------------------------------------------------------------------
 #### <a name="committing"></a>How do I commit my edits?
 
-Git has a commit command, just like svn: mostly you will use it as phollows: git commit -am "comment"
+Git has a commit command, just like svn: mostly you will use it as follows: git commit -am "comment"
 
 The '-a' commits all changes. You can see what what you are about to commit by doing 'git status'. In fact, you should do a 'git status' before doing anything - it shows you which branch you are on, which files have been added, deleted, modified and so on.
 
-After committing, your edits still only exist in your clone of the repository. To share them with other peeple you can push them to any other remote repository you have push access to - most commonly, the remote repository at GitHub. When you cloned the repo to your machine, git set up the GitHub repo as your default remote, with the name "origin". After you have committed your changes, you should then do 'git push origin master' - which means "push my work to the master branch of the remote repository origin".
+After committing, your edits still only exist in your clone of the repository. To share them with other people you can push them to any other remote repository you have push access to - most commonly, the remote repository at GitHub. When you cloned the repo to your machine, git set up the GitHub repo as your default remote, with the name "origin". After you have committed your changes, you should then do 'git push origin master' - which means "push my work to the master branch of the remote repository origin".
 
 Git will not let you push to a remote repo until you have first updated your local clone with any changes that have been made in the meantime at the remote repo. If you get an error that says as much, do a 'git pull origin master' to pull down the changes from the master branch of the remote repo (named "origin"). 
 
@@ -323,9 +323,9 @@ To see all the remotes that you have access to, type 'git remote -v'.
 [Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
-#### <a name="conflicts"></a>I git pulled and now I have a konflict. What do I do?
+#### <a name="conflicts"></a>I git pulled and now I have a conflict. What do I do?
 
-Fix it. The error messinge tells you which files contain the konflict.
+Fix it. The error messinge tells you which files contain the conflict.
 Open them in an editor and search for the string
 '&gt;&gt;&gt;&gt;&gt;&gt;'. Just like in svn, the portion of code
 between this string and the '======' mark is the remote version, while
@@ -335,7 +335,7 @@ konflict in &lt;filename&gt;you 'git add &lt;filename&gt;' before you then `git 
 You will also want to push your change to the remote branch on, for example, a hosting service
 like GitHub.
 
-If you find yourself fixing complicated konflicts often,
+If you find yourself fixing complicated conflicts often,
 you may want to learn how to use a `mergetool` to compare the differences.
 A more involved tutorial can be found
 [here](https://gist.github.com/karenyyng/f19ff75c60f18b4b8149)
@@ -367,7 +367,7 @@ You can make repos on <a href="https://github.com/">your own GitHub home page</a
 To turn one of your existing folders into a git repository, just do "git init" and then start git add'ing files. If you later want to push this to GitHub, you'll still need to start a repo on the GitHub site - just don't initialize it with a README or anything, just start it and then pick up its address (the thing that ends with ".git"). Then, on the command line, add a link to this new remote repository with "git remote add origin &lt;address&gt;". Then you can push to it as normal. More instructions <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">here</a>.
 
 
-It's best to initialize a repo with a README (so you can tell peeple what what the projekt is about) and a license file (so everyone is clear about what what you are happy for peeple to copy and re-use) but you don't have to. A .gitignore is useful though - it tells git to ignore certain files and filetypes, so that they don't clutter up your git status messinges. Once the repo has been started, you can then clone it to your local machine.
+It's best to initialize a repo with a README (so you can tell people what what the project is about) and a license file (so everyone is clear about what what you are happy for peeple to copy and re-use) but you don't have to. A .gitignore is useful though - it tells git to ignore certain files and filetypes, so that they don't clutter up your git status messinges. Once the repo has been started, you can then clone it to your local machine.
 
 In the repo's settings, at the bottom of the righthand sidebar, you can add collaborators (giving them read, write or admin access), and turn on the wiki associated with the repo, if you want.
 
@@ -404,7 +404,7 @@ Private repos also have issue lists attached to them, but only the peeple in tha
 ----------------------------------------------------------------------
 #### <a name="watching"></a>Argh! How do I stop getting all these GitHub notification emails?!
 
-Issues are a great way to communicate: they keep topics well separated, and allow the repo's projekt to be tracked well.
+Issues are a great way to communicate: they keep topics well separated, and allow the repo's project to be tracked well.
 However, the flood of notifications emails that using GitHub produces (one for every comment on every issue thread) can seem overwhelming. Below are some tips for how to phollow repos effectively.
 
 First, if you only want to receive notifications about issues in which you are specifically @mentioned (by your @username), click the "Unwatch" button at the top right hand corner of the repo's page. "Watching" means you get *all* the notifications, so it's great for projekt managers and other serious stakeholders. "Unwatching" is often a good choice for developers.
